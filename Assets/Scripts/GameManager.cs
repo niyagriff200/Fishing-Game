@@ -25,14 +25,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPawnPrefab;
     public GameObject PlayerPawnPrefab => playerPawnPrefab;
 
-    [SerializeField] private GameObject fishOnePrefab;
-    public GameObject FishOnePrefab => fishOnePrefab;
+    [SerializeField] private GameObject bobberPrefab;
+    public GameObject BobberPrefab => bobberPrefab;
 
-    [SerializeField] private GameObject fishTwoPrefab;
-    public GameObject FishTwoPrefab => fishTwoPrefab;
-
-    [SerializeField] private GameObject fishThreePrefab;
-    public GameObject FishThreePrefab => fishThreePrefab;
+    [SerializeField] private StruggleBar struggleBarPrefab;
+    public StruggleBar StruggleBarPrefab => struggleBarPrefab;
 
     [Header("Fish Settings")]
     [SerializeField] private float minWaitTime;
@@ -44,17 +41,33 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int buttonMashGoal;
     public int ButtonMashGoal => buttonMashGoal;
 
+    [SerializeField] private float barFallRate;
+    public float BarFallRate => barFallRate;
 
+    [SerializeField] private float tapAmount;
+    public float TapAmount => tapAmount;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float failThreshold;
+    public float FailThreshold => failThreshold;
+
+    [SerializeField] private float barMax;
+    public float BarMax => barMax;
+
+    void Awake()
     {
-        
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        // Nothing needed yet
+    }
+
     void Update()
     {
-        
+        // Nothing needed yet
     }
 }
