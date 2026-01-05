@@ -6,16 +6,46 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => instance;
 
     [Header("Game Screens")]
-    [SeralizedField] private GameObject splashScreen;
+    [SerializeField] private GameObject splashScreen;
     public GameObject SplashScreen => splashScreen;
 
-    [SeralizedField] private GameObject mainMenuScreen;
+    [SerializeField] private GameObject mainMenuScreen;
     public GameObject MainMenuScreen => mainMenuScreen;
 
-    [SeralizedField] private GameObject gameplayScreen;
+    [SerializeField] private GameObject gameplayScreen;
     public GameObject GameplayScreen => gameplayScreen;
 
-    [SeralizedField] private GameObject 
+    [SerializeField] private GameObject settingsScreen;
+    public GameObject SettingsScreen => settingsScreen;
+
+    [SerializeField] private GameObject creditsScreen;
+    public GameObject CreditsScreen => creditsScreen;
+
+    [Header("Prefabs")]
+    [SerializeField] private GameObject playerPawnPrefab;
+    public GameObject PlayerPawnPrefab => playerPawnPrefab;
+
+    [SerializeField] private GameObject fishOnePrefab;
+    public GameObject FishOnePrefab => fishOnePrefab;
+
+    [SerializeField] private GameObject fishTwoPrefab;
+    public GameObject FishTwoPrefab => fishTwoPrefab;
+
+    [SerializeField] private GameObject fishThreePrefab;
+    public GameObject FishThreePrefab => fishThreePrefab;
+
+    [Header("Fish Settings")]
+    [SerializeField] private float minWaitTime;
+    public float MinWaitTime => minWaitTime;
+
+    [SerializeField] private float maxWaitTime;
+    public float MaxWaitTime => maxWaitTime;
+
+    [SerializeField] private int buttonMashGoal;
+    public int ButtonMashGoal => buttonMashGoal;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
